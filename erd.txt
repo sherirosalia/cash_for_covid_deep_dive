@@ -1,0 +1,118 @@
+naics_cat
+-
+id int 
+cat varchar pk  fk - non_profit_over_150k.Naics_Category
+description varchar
+biz_count  NULL string
+
+
+naics_desc
+-
+Code varchar pk
+Title varchar 
+Description varchar 
+
+banks_summary
+-
+Bank varchar pk
+Loan_Sum int
+Average_Loan int
+Median_Loan int
+
+category-summary
+-
+description varchar pk fk - naics_cat.description
+Jobs_Saved int 
+Median_Loan int
+Average_Loan int
+Total_Loans int
+
+
+non_profit_over_150k
+-
+Loan_Range varchar 
+Name varchar 
+Address varchar 
+City varchar 
+State varchar
+Zip varchar 
+NAICS_Code fk - naics_desc.Code
+Business_Type varchar 
+Race varchar 
+Gender varchar 
+Veteran varchar 
+Non_Profit varchar
+Jobs_Saved int
+Date date 
+Bank varchar 
+NAICS_Category varchar 
+Title varchar 
+description varchar 
+
+non_profit_under_150k_data
+-
+Loan_Amount int
+City varchar 
+State varchar 
+Zip varchar 
+NAICS_Code varchar fk - naics_desc.Code
+Business_Type varchar 
+Race varchar 
+Gender varchar 
+Veteran varchar 
+Non_Profit varchar 
+Jobs_Saved int
+Date date 
+Bank varchar 
+
+over_150_cleaned
+-
+Loan_Range varchar
+Name varchar 
+Address varchar 
+City varchar 
+State varchar
+Zip varchar 
+NAICS_Code varchar fk
+Business_Type varchar 
+Race varchar 
+Gender varchar 
+Veteran varchar 
+Jobs_Saved int
+Date date 
+Bank varchar 
+NAICS_Category varchar fk
+Title varchar fk
+description varchar fk
+
+full_under_150_cleaned
+-
+"Loan Amount" int
+City varchar
+State varchar
+Zip varchar
+"NAICS Code" varchar
+"Business Type" varchar 
+Race varchar 
+Gender varchar 
+Veteran varchar 
+Jobs_Saved int
+Date date
+Bank varchar
+"NAICS Category" varchar
+Title varchar
+Description varchar
+description
+"Loan Percentile" varchar
+"Loan Quartile" varchar
+DayNum int
+Weekday varchar
+
+
+
+
+
+
+
+
+
