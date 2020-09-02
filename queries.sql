@@ -86,23 +86,67 @@ SELECT * FROM waste_management
 WHERE state = 'NY'
 limit 30;
 
+-- waste management sliced from naics cat
+SELECT * FROM naics_cat;
+SELECT * 
+FROM non_profit_under_150k 
+AS nps 
+WHERE LEFT(naics_code,2) = '56'
 
--- 
+-- rename non profit tables, too long
+ALTER TABLE non_profit_under_150k 
+RENAME TO np_under
+
+ALTER TABLE np_over_150
+RENAME TO np_over;
+
+-- new column
+-- ALTER TABLE np_under DROP column n_cat;
+-- UPDATE np_under
+-- SET n_cat=substr(naics_code, 2, 2);
+
+SELECT * FROM np_under LIMIT 5;
+
+SELECT * FROM naics_desc;
+SELECT * FROM naics_cat;
+
+select * from under_150 limit 10;
+select * from np_under limit 10;
+
+-- find out racial values
+SELECT DISTINCT race
+FROM np_under;
+
+-- set transaction for rollback
+-- Transaction set
+SELECT loan_amount, city, state, zip, bank, naics_code,  race, gender, veteran, date, naics_category  FROM under_150
+WHERE state = 'AK' AND race = 'American Indian or Alaska Native'
+UNION ALL
+SELECT loan_amount, city, state, zip, bank, naics_code,  race, gender, veteran, date, n_cat FROM np_under
+WHERE state = 'AK' AND race = 'American Indian or Alaska Native'
+ORDER BY City DESC;
+
+-- End transaction
 
 
+-- Joining under150 and naics_cat tables
+-- SELECT under_150.naics_category,
+--      naics_cat.cat,
+--      naics_cat.description
+-- FROM naics_cat
+-- FULL JOIN under_150
+-- ON under_150.naics_category = naics_cat.cat;
 
+-- CREATE TABLE u150_desc AS
+-- (SELECT under_150.naics_category,
+--      naics_cat.cat,
+--      naics_cat.description
+-- FROM naics_cat
+-- LEFT JOIN under_150
+-- ON under_150.naics_category = naics_cat.cat);
 
-
-
-
-
-
-
-
-
-
-
-
+-- select * from  u150_desc limit 10;
+å
 
 
 
