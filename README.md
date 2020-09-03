@@ -9,3 +9,6 @@ Deeper exploration of data from this project:
 
 ### Distribution of PPP money in California, USA
 ![california ppp map](docs/images/california.png)
+
+### Data files
+CSV files for the content here can be downloaded from Google drive here: <a href='https://drive.google.com/drive/folders/1btGEd8YJHIIAve3hzlE5XrByHE2Uj5g2?usp=sharing'>CSV files </a>.
