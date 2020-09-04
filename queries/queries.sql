@@ -146,7 +146,7 @@ ORDER BY City DESC;
 -- ON under_150.naics_category = naics_cat.cat);
 
 -- select * from  u150_desc limit 10;
-å
+
 
 
 

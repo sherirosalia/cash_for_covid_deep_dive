@@ -130,7 +130,7 @@ SELECT s.jobs_saved, s.date, s.bank, s.gender, s.veteran, s.race, s.city, s.stat
 	
 DROP TABLE IF EXISTS  filtered_people;
 --add category descriptions
-SELECT f.jobs_saved, f.date, f.bank, f.gender, f.veteran, f.race, f.city, f.state, f.n_cat 
+SELECT f.jobs_saved, f.date, f.bank, f.gender, f.veteran, f.race, f.city, f.state, f.n_cat, c.description
 INTO filtered_people
 FROM people as f
  	LEFT JOIN naics_cat as c
@@ -141,6 +141,58 @@ OR gender != 'Unanswered';
 
 SELECT * FROM filtered_people LIMIT 10;
 SELECT COUNT (*) FROM filtered_people;
+
+
+select * from naics_cat limit 5;
+select * from np_under limit 5;
+select * from naics_code limit 5;
+
+DROP TABLE IF EXISTS  np_u;
+--add category descriptions
+SELECT f.jobs_saved, f.date, f.bank, f.gender, f.veteran, f.race, f.city, f.state, f.n_cat, c.description
+INTO np_u
+FROM np_under as f
+ 	LEFT JOIN naics_cat as c
+	  ON(f.n_cat=c.cat);
+
+
+
+SELECT * FROM np_u LIMIT 10;
+SELECT COUNT (*) FROM np_u;
+
+SELECT * FROM np_u LIMIT 10;
+SELECT COUNT (*) FROM np_u;
+SELECT COUNT (*) FROM np_under;
+
+DROP TABLE IF EXISTS np_under;
+
+ALTER TABLE np_u
+RENAME TO np_under;
+
+DROP TABLE IF EXISTS np_under;
+SELECT COUNT (*) FROM np_under;
+SELECT * FROM np_under LIMIT 10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
