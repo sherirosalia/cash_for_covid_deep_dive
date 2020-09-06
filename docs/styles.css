@@ -1,8 +1,14 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family:  "Palatino Linotype", "Book Antiqua", Palatino, serif;;
 }
+footer {
+    margin-top: 3em;
+}
+
+
 .jumbotron {
     margin-bottom: 0;
 }
@@ -25,6 +31,9 @@ h2 {
     font-size: 120%;
     
 } 
+.spacer{
+    margin-top: 50px;
+}
 p {
 font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 font-size: 110%;;
