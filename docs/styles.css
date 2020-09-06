@@ -3,7 +3,12 @@ body {
     padding: 0;
     font-family:  "Palatino Linotype", "Book Antiqua", Palatino, serif;;
 }
-/
+.jumbotron {
+    margin-bottom: 0;
+}
+.navbar {
+    margin-bottom: 2em;
+}
 #la_map {
 
     width: 400px;

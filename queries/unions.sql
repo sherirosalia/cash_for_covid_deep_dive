@@ -173,6 +173,54 @@ DROP TABLE IF EXISTS np_under;
 SELECT COUNT (*) FROM np_under;
 SELECT * FROM np_under LIMIT 10;
 
+-- under 150 needs description
+select * from under_150 limit 5;
+DROP TABLE IF EXISTS  un_150;
+--add category descriptions
+SELECT f.loan_amount, f.city, f.state, f.zip, f.naics_code, f.race, 
+f.gender, f.veteran, f.jobs_saved, f.bank, f.naics_category, c.description
+INTO np_u
+FROM under_150 as f
+ 	LEFT JOIN naics_cat as c
+	  ON(f.naics_category=c.cat);
+
+DROP TABLE IF EXISTS under_150;
+ALTER TABLE np_u 
+RENAME 
+TO under_150;
+
+-- under 150 loans add title and description,
+select count (*) from under_150;
+select count (*) from np_u;
+
+select * from under_150 limit 5;
+
+-- under 150 needs description
+select * from under_150 limit 5;
+select * from naics_code;
+
+DROP TABLE IF EXISTS  un_150;
+--add category descriptions
+SELECT f.loan_amount, f.city, f.state, f.zip, f.naics_code, f.race, 
+f.gender, f.veteran, f.jobs_saved, f.bank, f.naics_category, f.description, c.title
+INTO np_u
+FROM under_150 as f
+ 	LEFT JOIN naics_code as c
+	  ON(f.naics_code=c.code);
+
+DROP TABLE IF EXISTS under_150;
+ALTER TABLE np_u 
+RENAME 
+TO under_150;
+
+
+select count (*) from under_150;
+select count (*) from np_u;
+
+select * from under_150 limit 5;
+select * from np_u limit 5;
+
+select * from sml limit 5;
 
 
 
