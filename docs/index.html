@@ -19,7 +19,7 @@
 <!-- <div class="container-fluid">   -->
 
     <div class="jumbotron sticky-top bg-dark text-white">
-        <h1>Cash for covid ETL</h1>            
+        <h1>Cash for covid</h1>            
         <p class="lead text-white">Where did the Paycheck Protection Program money go?</p> 
         <p class="lead text-white"></p>              
     </div>
@@ -57,16 +57,20 @@
 
    
        
-    <div class="container">
+          <div class="container">
             <!-- beginning of intro -->
         <div class="container">
             <div class="row">
                 
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <h2>Shaping up!</h2>
+                    <h2>Unprecedented access to small business loan data</h2>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, pariatur, praesentium blanditiis est voluptas dolorem iusto sint non amet illum dolore quisquam! 
-                        Nulla officiis, aliquid cum sequi mollitia eos tenetur.
+                        It seems that no section of the country was untouched by enterpreneurs seeking relief from the 
+                        effects of the government shutdown in reaction to the Coronavirus. The release of
+                        lending records from the US Treasury in conjunction with the Small Business Association,
+                         albeit under unfortunate circumstances,
+                        allows an unusual glimpse into small businesses
+                        affected by the crisis.
                     </p>
 
                 </div>
@@ -79,8 +83,8 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <figure>
-                            <img src="images/shapes_usa.png" class="mx-auto d-block img-fluid figure-image" alt="nationwide">
-                            <figcaption class="figure-caption">Sample representation of "Non Profit" loan recipients</figcaption>
+                            <img src="images/gender_usa.png" class="mx-auto d-block img-fluid figure-image" alt="nationwide">
+                            <figcaption class="figure-caption">Sample representation of male (blue) vs. female (pink) loan distribution.</figcaption>
                             </figure>
                         </div>
                     </div>
@@ -88,189 +92,161 @@
                 <!-- end of national image -->
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <!-- explanation/intro -->
-                    <h2>Sister project</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Obcaecati maxime, dolorem quis error consequuntur unde ipsa fuga, delectus, a laborum corrupti praesentium assumenda amet. 
-                        Possimus harum ut ex rerum nulla!
-                    </p>
+                <div class="container">
 
+                    <!-- pyspark -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Initial analysis</h2>
+                            <p>The purpose of the loans was to help businesses save jobs. The potential expenditure per capita of funds for the larger
+                                loan amounts came in at $2,000 and the under $150k disbursements at $8,000 per job saved. This assessment is 
+                                 based on calculations infered from statements Steve Mnuchin 
+                                made, namely that the sum of the loans over $150k account for 75% of the total lent and was borrowed by only 
+                                13% of enterprises.  
+                            </p>
+                            <p>
+                                Machine learning also suggested a dependency between number of jobs "saved" and loan ammounts as it gave this feature the 
+                                most weight.
+                            </p>
+                            <p>
+                                Even though the largest of loans went to seemingly the largest employers, the question arises as to how effective $2000 per job would be in helping employees in comparison
+                                to the smaller business loans which had a higher amount of money per person ratio.
+                            </p>
+                        </div>
+                    </div>
 
-                    <p> GitHub repository:  
-                        <a href='https://github.com/sherirosalia/cash_for_covid_clean_machine_deep_dive'>Cash for covid, ETL</a>.
-                        </p>
-                        <p> Sister Repository:  
-                        <a href='https://github.com/sherirosalia/cash_for_covid_clean_machine_pipeline'>Cash for covid, clean Machine pipeline</a>.
-                        </p>
-                    
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <figure>
+                            <img class="img-fluid figure-image" src="images/small_loans_all_states.png" alt="random forest output">
+                            <figcaption class="figure-caption">Machine learning suggests the number of jobs saved has the strongest correlation to loan amounts.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
                 </div>
-            </div>
 
             
 
-            <!-- <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <figure>
-                    <img class="img-fluid figure-image" src="images/california.png" alt="california">
-                    <figcaption class="figure-caption">Loans in California.</figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-2"></div>
-            </div> -->
         </div>
        
-        
-
-
-        <!-- end of intro area container -->
-               <!-- beginning of machine learning and pyspark  -->
-               <div class="container">
-                <!-- area to explain pie charts -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>Work in progress</h2>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sed!
-                        </p>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Magnam temporibus at iste, quas suscipit accusamus?
-                        </p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Fuga perspiciatis odio eius cupiditate quaerat ex?
-
-                        </p>
-                    </div>
+          <!-- beginning of pie charts -->
+          <div class="container">
+            <!-- area to explain pie charts -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Businesses loans and the jobs saved.</h2>
+                    <p>The pie charts below reflect the loan volume in each general job category along with 
+                        the jobs saved. This helps to evaluate where the money went and which industries supported 
+                        retention of the greatest number of jobs. For example, the visualizations suggest that
+                        the  "Acommodation and Food Services" category saved the greatest percentage of 
+                        employees in proportion to how much was borrowed and "Construction" looks to be the reverse. 
+                    </p>
                 </div>
-               </div>
+            </div>
+            
+            <!-- first pie chart -->
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <img class="img-fluid" src="images/loans_cat.png" alt="pie chart of loans by category">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <!-- second pie chart -->
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <img class="img-fluid" src="images/jobs_saved_cat.png" alt="pie chart jobs saved category">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>  
+        <!-- end of pie chart container -->
+    <!-- </div> -->
+
+    <!-- banks beginning -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h2>The Banks</h2>
+                <p>
+                    Bank of America and JP Morgan Chase were at the top of the list of lenders by count of loans, 
+                    but financial tech organizations such as 
+                    Kabbage and Celtic Bank made a strong showing. 
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <figure>
+                    <img class="img-fluid figure-image" src="images/top_bank_list.png" alt="jobs saved category">
+                    <figcaption class="figure-caption">List of lenders descending by count</figcaption>
+                </figure>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <figure>
+                    <img class="img-fluid figure-image" src="images/top_lenders_small_loans.png" alt="jobs saved category">
+                    <figcaption class="figure-caption">Banks for loans under $150k</figcaption>
+                </figure>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <!-- end of intro to banks -->
+
+            <!-- end of bank graph image -->
 
             <div class="container">
-
-                <!-- related repositories -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <p>Sister repository:  
-                            <a href='https://github.com/sherirosalia/cash_for_covid_clean_machine_pipeline'>Cash for covid, clean machine pipeline</a>.
-                            </p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                            A, aspernatur. Quidem nam alias veritatis corrupti odio! 
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <!-- explanation/intro -->
+                        <h2>The next step</h2>
+                        <p> There is a lot here, and the number of lines of inquiry seem potentially endless. A few ideas 
+                            are to obtain granularity on loan dispersement per job saved in various categories, regional lending 
+                            differences such as rural
+                            vs urban, differences between banks in various states.
                         </p>
-                    </div>
-                </div>
-            </div>
-
-               
-
-        <!-- beginning of  -->
-        <div class="container">
-                <!-- placeholder text -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>Placeholder</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                            Doloribus atque harum laudantium et! Quae commodi impedit pariatur!
+                        <p>
+                            One of many candidates for deeper analysis is a racially based observation for loans under $150k 
+                            is that Asians borrowed almost twice as much as Hispanics did while only
+                        being one third the size of the Hispanic population. There could be any number of reasons for this but examining
+                        rates of self employment, business types and/or cultural attitudes towards business investment may be illuminating. 
+                        Additionally, it is 
+                        possible that Asians answered the racial inquiry more often than Hispanics which would skew the results.   
                         </p>
+                        <p>
+                        The above being said, the next step in the process is using SQL relational databases for ease of combining sources 
+                        and to visualize the results with Tableau. The repository for these applications is linked below.
+                        </p> 
+                        <p>Application of big data and machine learning techniques form the basis of the first part of a journey to see what stories are revealed 
+                        and where to focus granular analysis in order to understand more about this ongoing economic crisis at a human and macro level.
+                       </p>
+                        <p>Analysis Repository:  
+                        <a href='https://github.com/sherirosalia/cash_for_covid_deep_dive'>Cash for covid, deep dive</a>.
+                        </p>
+                        <!-- <p> Some other thing:  
+                        <a href='https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program?utm_medium=email&utm_source=govdelivery#section-header-11'>Small Business Association</a>.
+                        </p> -->
+                        
                     </div>
-                </div>
-                
-                <!-- image area 1 -->
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <img class="img-fluid" src="images/cherry.jpg" alt="cereja">
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-                <!-- image area 2 -->
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <img class="img-fluid" src="images/rose.jpg" alt="rose">
-                    </div>
-                    <div class="col-md-2"></div>
-                </div>
-            </div>  
-            <!-- end of pie chart container -->
-        <!-- </div> -->
-
-        <!-- banks beginning -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <h2>Placeholder</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Error, fugiat et! Quo esse rerum recusandae. 
-                    </p>
-
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <figure>
-                        <img class="img-fluid figure-image" src="images/data.jpg" alt="jobs saved category">
-                        <figcaption class="figure-caption">Power of data</figcaption>
-                    </figure>
-
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <figure>
-                        <img class="img-fluid figure-image" src="images/record.jpeg" alt="jobs saved category">
-                        <figcaption class="figure-caption">For the record</figcaption>
-                    </figure>
-
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </div>
-
-        <!-- end of intro to banks -->
-
-                <!-- end of bank graph image -->
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <!-- explanation/intro -->
-                            <h2>The next step</h2>
-                            
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                Perspiciatis, vero? Beatae dignissimos maxime nobis laboriosam aliquid architecto provident eligendi atque?
-                            </p>
-
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Numquam quaerat laboriosam in, temporibus libero repellendus hic dolorem, natus, omnis voluptatem asperiores. 
-                                Nostrum fuga veniam eos id assumenda facere a. Perferendis.
-                            </p>
-
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Numquam quaerat laboriosam in, temporibus libero repellendus hic dolorem, natus, omnis voluptatem asperiores. 
-                                Nostrum fuga veniam eos id assumenda facere a. Perferendis.
-                            </p>
-
-                            <p>Check out my other projects:  
-                            <a href='https://github.com/sherirosalia/'>Github</a>.
-                            </p>
-                            <!-- <p> Some other thing:  
-                            <a href='https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program?utm_medium=email&utm_source=govdelivery#section-header-11'>Small Business Association</a>.
-                            </p> -->
-                            
-                        </div>
-                    </div>
-                </div>
 
 
 
